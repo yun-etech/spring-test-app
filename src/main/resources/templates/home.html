@@ -1,13 +1,13 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-
-<body>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<th:block th:replace="fragments/header :: headerFragment"></th:block>
     <div class="container">
-        <div>
-            <h1>Hello Spring</h1> <p>회원 기능</p>
+        <div class="container">     
+            <h1>Hello Tanzu Application Platform</h1> 
             <p>
-                <a href="/members/new">회원 가입</a> <a href="/members">회원 목록</a>
+                <a href="/members/new" class="btn btn-success">회원 가입</a> <a href="/members" class="btn btn-success">회원 목록</a>
             </p> 
         </div>
     </div> <!-- /container -->
-</body>
+<th:block th:replace="fragments/footer :: footerFragment"></th:block>
+</html>

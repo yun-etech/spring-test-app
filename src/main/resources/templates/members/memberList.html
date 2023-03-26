@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div class="container">
-    <div>
-        <table>
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>이름</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="member : ${members} ">
-                <td th:text="${member.id}"></td>
-                <td th:text="${member.name}"></td>
-            </tr>
-            </tbody>
-        </table>
+<th:block th:replace="fragments/header :: headerFragment"></th:block>
+    <div class="container">
+        <div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">이름</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="member : ${members} ">
+                    <td scope="row" th:text="${member.id}"></td>
+                    <td th:text="${member.name}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
-</body>
+<th:block th:replace="fragments/footer :: footerFragment"></th:block>
 </html>
