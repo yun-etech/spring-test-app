@@ -7,12 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.etech.tanzu.domain.Member;
 import com.etech.tanzu.service.MemberService;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 
+@Tag(name = "members", description = "회원 API")
 @Controller
 public class MemberController {
     
@@ -44,6 +46,18 @@ public class MemberController {
         model.addAttribute("members", members);
         
         return "members/memberList";
+    }
+
+    @GetMapping("/members/test")
+    @ResponseBody
+    public String test() {
+        return "this is test";
+    }
+
+    @GetMapping("/members/test-api")
+    @ResponseBody
+    public String testApi() {
+        return "this is test-api";
     }
     
 }
