@@ -14,7 +14,7 @@ import com.etech.tanzu.service.MemberService;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name = "members", description = "회원 API")
+@Tag(name = "members", description = "member API")
 @Controller
 public class MemberController {
     
