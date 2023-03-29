@@ -57,7 +57,7 @@ public class MemberController {
     @GetMapping("/members/test-api")
     @ResponseBody
     public String testApi() {
-        return "this is test-api";
+        return "this is test-api!!";
     }
     
 }
