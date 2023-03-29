@@ -13,8 +13,8 @@ metadata:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-test-app'
 spec:
   type: service
-#   providesApis:
-#    - tanzu-java-web-app-api
+  # providesApis:
+  #  - member-api
 #   consumesApis:
 #    - demo-api
   lifecycle: experimental
