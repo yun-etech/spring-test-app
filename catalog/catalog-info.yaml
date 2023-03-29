@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-test-app
+  description: Springboot sample app of ETECH for TAP
+  tags:
+    - member_api
+    - java
+    - spring
+    - web
+    - tanzu
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=spring-test-app'
+spec:
+  type: service
+#   providesApis:
+#    - tanzu-java-web-app-api
+#   consumesApis:
+#    - demo-api
+  lifecycle: experimental
+  owner: yun-etech
+#   system: tap-hol
